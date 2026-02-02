@@ -40,10 +40,12 @@ const Settings = () => {
   };
 
   const addDrug = () => {
+    const newId = currentData.length > 0 ? currentData.length : 0;
     const newDrug = {
-      id: Date.now(),
+      id: newId,
       name: '',
       description: '',
+      check: false,
     };
     setFormFields((prev) => [...prev, newDrug]);
     setCurrentData((prev) => [...prev, newDrug]);
