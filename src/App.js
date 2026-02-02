@@ -53,14 +53,14 @@ const App = () => {
   const onDoubleClickHandler = (id) => {
     setDrugs((prevDrugs) =>
      prevDrugs.map((drug) => 
-      drug.id === id ? {...drug, check: 1 } : drug 
+      drug.id === id ? {...drug, check: !drug.check } : drug 
      )
      );
   };
 
   const handleReset = () => {
     setDrugs((prevDrugs) =>
-      prevDrugs.map((drug) => ({ ...drug, check: 0 }))
+      prevDrugs.map((drug) => ({ ...drug, check: false }))
     );
   };
 
@@ -69,7 +69,7 @@ const App = () => {
   }
 
   // cheks for any drug've been taken
-  const drugsTaken = drugs.some((drug) => drug.check === 1);
+  const drugsTaken = drugs.some((drug) => drug.check === true);
 
   // fricking crutch
   const crutch = drugsTaken && !toggled;
