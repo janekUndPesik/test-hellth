@@ -5,9 +5,9 @@ import './drug-container.css';
 const DrugContainer = ({ drugs, onClicker }) => {
   return (
     <div className='drug-container'>
-      {drugs.filter((drug) => drug.check === false)
-      .map((drug) => (
+      {drugs.map((drug) => (
         <DrugLine
+          classForChild={`drugLine${drug.check}`}
           key={drug.id}
           drug={drug}
           onClicker={onClicker}

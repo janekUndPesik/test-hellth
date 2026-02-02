@@ -29,3 +29,9 @@
   filter: drop-shadow(0 0 1px white);
   z-index: -1;
 }
+
+.drugLinetrue {
+  text-decoration: line-through;
+  font-style: italic;
+  color: rgb(88, 75, 98);
+}
