@@ -1,0 +1,64 @@
+.settings-container {
+  background-color: rgb(13, 13, 13);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: scroll;
+}
+
+.settings-container h2 {
+  text-align: center;
+  color: rgb(137, 86, 175);
+  color:rgb(65, 231, 9);
+  text-shadow: 1px 1px;
+}
+
+.settings-container form {
+  max-width: 80%;
+  text-align: left;
+}
+
+.settings-container label {
+  display: inline-block;
+  margin: 2% 0 0 7%;
+  color: rgb(137, 86, 175);
+  color:rgb(65, 231, 9);
+  filter: drop-shadow(1px 1px);
+}
+
+.input-group {
+  position: relative;
+  margin-top: 3%;
+}
+
+.input-group:hover {
+  border: 1px solid rgb(65, 231, 9);
+}
+
+.delete-button {
+  position: absolute;
+  top: 60%;
+  right: 15%;
+  color: rgb(137, 86, 175);
+  color:rgb(65, 231, 9);
+  filter: drop-shadow(1px 1px);
+}
+
+.add-button {
+  color: rgb(137, 86, 175);
+  margin: 5% 0 0 5%;
+  color:rgb(65, 231, 9);
+  filter: drop-shadow(1px 1px);
+}
+.save-btn { 
+  text-align: center;
+}
+
+.btn-4 {
+  color: #8ce436;
+  padding: 0;
+  border: 1px solid #8ce436;
+  box-shadow: 0 0 5px #8ce436, 0 0 5px inset;
+  background-color: rgb(13, 13, 13);
+}

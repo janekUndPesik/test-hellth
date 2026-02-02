@@ -1,0 +1,7 @@
+.drug-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  margin: auto;
+  padding-top: 30%;
+}
