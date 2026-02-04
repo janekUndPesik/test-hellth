@@ -35,7 +35,7 @@ const Settings = () => {
             <p>Description</p>
             <input 
               placeholder={drug.description}
-              onChange={(e) => handleChange(drug.id, 'name', e.target.value)}
+              onChange={(e) => handleChange(drug.id, 'value', e.target.value)}
               value={drug.description}
             />
             <div onClick={() => removeDrug(drug.id)} className='delete-button'><DeleteIcon /></div>
