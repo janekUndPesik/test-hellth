@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState } from 'react';
 
 import PLACEHOLDER_DATA from '../utils/placeholder-data';
 
@@ -14,9 +14,6 @@ export const DrugsContext = createContext({
 export const DrugsProvider = ({ children }) => {
   const [currentDrugs, setCurrentDrugs] = useState(() => {
     const currentJsonValue = localStorage.getItem('LOCAL_STASH');
-    console.log(currentJsonValue);
-    const jsonValue = localStorage.getItem('PRIMARY_STORAGE_DATA');
-    console.log(jsonValue)
     const jsonDate = localStorage.getItem('DATE');
     const date = new Date();
     const dateString = `${date.getDate()}${date.getMonth()}`;
@@ -24,8 +21,8 @@ export const DrugsProvider = ({ children }) => {
     switch (true) {
       case currentJsonValue && (dateString === JSON.parse(jsonDate)):
         return JSON.parse(currentJsonValue);
-      case jsonValue:
-        const primaryValue = JSON.parse(jsonValue);
+      case currentJsonValue && (dateString !== JSON.parse(jsonDate)):
+        const primaryValue = JSON.parse(currentJsonValue);
         return primaryValue.map((drug) => ({ ...drug, check: false }));
       default:
         return PLACEHOLDER_DATA;
@@ -33,10 +30,6 @@ export const DrugsProvider = ({ children }) => {
   });
 
   const [isSettingsOpen, setSettingsOpen] = useState(false);
-
-  useEffect(() => {
-    localStorage.setItem('PRIMARY_STORAGE_DATA', JSON.stringify(currentDrugs));
-  }, [currentDrugs]);
 
 const addDrug = (currentDrugs) => {
   const newDrug = {

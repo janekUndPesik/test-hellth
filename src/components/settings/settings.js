@@ -26,16 +26,16 @@ const Settings = () => {
       <div className='settings-container'>
         {currentDrugs.map((drug) => (
           <div key={drug.id} className='input-container'>
-            <h2>Name</h2>
+            <h2>Name:</h2>
             <input 
               placeholder={drug.name}
               onChange={(e) => handleChange(drug.id, 'name', e.target.value)}
               value={drug.name}
             />
-            <p>Description</p>
+            <p>Description:</p>
             <input 
               placeholder={drug.description}
-              onChange={(e) => handleChange(drug.id, 'value', e.target.value)}
+              onChange={(e) => handleChange(drug.id, 'description', e.target.value)}
               value={drug.description}
             />
             <div onClick={() => removeDrug(drug.id)} className='delete-button'><DeleteIcon /></div>
