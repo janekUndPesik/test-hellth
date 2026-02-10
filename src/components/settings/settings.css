@@ -1,40 +1,41 @@
-.cross-btn {
-  position: sticky;
+.nav-container  {
+  position: fixed;
   top: 0;
-  right: 0;
-  float: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
   color: rgb(137, 86, 175);
+  width: 100vw;
+  height: 30px;
+  transition: 300ms ease all;
+  z-index: 2;
+}
+
+.save-btn {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+}
+
+.cross-btn {
+  position: fixed;
+  top: 5px;
+  right: 5px;
 }
 
 .settings-container {
-  max-width: 75%;
-  padding-top: 10px;
-}
-
-.settings-container h2 {
-  font-size: 10px;
-  color: rgb(137, 86, 175);
-}
-
-.settings-container p {
-  font-size: 10px;
-  color: rgb(137, 86, 175);
-}
-
-input {
-  background: none;
-  border: none;
-  border-bottom: 1px solid rgb(137, 86, 175);
-  color: rgb(65, 231, 9);
-}
-
-input:focus {
-  outline: none;
+  width: 75%;
+  margin: auto;
+  padding-top: 15%;
+  padding-bottom: 10%;
 }
 
 .input-container {
   position: relative;
-  margin-bottom: 55px;
+  height: 80px;
+  margin-bottom: 40px;
 }
 
 .delete-button {
@@ -45,7 +46,9 @@ input:focus {
 }
 
 .add-button {
-  margin: 5% 0 0 5%;
+  position: fixed;
+  left: 5px;
+  bottom: 5px;
   color:rgb(65, 231, 9);
   filter: drop-shadow(1px 1px);
 }

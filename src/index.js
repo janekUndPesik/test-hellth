@@ -4,13 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { DrugsProvider } from './contexts/drugs.context';
+import { ThemeProvider } from './contexts/theme.context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <DrugsProvider>
-      <App />
-    </DrugsProvider>
+    <ThemeProvider>
+      <DrugsProvider>
+        <App />
+      </DrugsProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

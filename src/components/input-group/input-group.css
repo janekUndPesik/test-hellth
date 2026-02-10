@@ -1,0 +1,59 @@
+.input-group {
+  height: 40px;
+  position: relative;
+}
+
+.input-raw {
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgb(137, 86, 175);
+  color: rgb(65, 231, 9);
+  
+  &.text-input {
+    position: absolute;
+    bottom: 2px;
+  }
+  
+  &.time-input {
+    position: absolute;
+    bottom: 2px;
+    left: 30%;
+    width: 15%;
+    max-width: 40px;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+/* label {
+  position: absolute;
+  bottom: 2px;
+  pointer-events: none;
+  color: green;
+  transition: 300ms ease all;
+
+  &.shrink {
+    color: rgb(187, 225, 183);
+    position: absolute;
+    bottom: 22px;
+    font-size: 11px;
+  }
+} */
+
+.label-raw {
+  position: absolute;
+  bottom: 2px;
+  pointer-events: none;
+  color: green;
+  transition: 300ms ease all;
+
+  &.text-input {
+    &.shrink {
+      color: var(--shrink-text);
+      bottom: 22px;
+      font-size: 11px;
+    }
+  }
+}

@@ -1,21 +1,5 @@
 .main-container {
-  height: 100vh;
-  /* background-color: rgb(13, 13, 13); */
-  /* overflow: scroll; */
-}
-
-.settings-btn {
-  position: sticky;
-  top: 0;
-  right: 0;
-  float: right;
-  color: rgb(137, 86, 175);
-}
-
-.reset-btn {
-  position: sticky;
-  top: 0;
-  left: 0;
-  float: left;
-  color: rgb(137, 86, 175);
+  background-color: var(--background-color);
+  min-height: 100vh;
+  transition: 300ms ease all;
 }

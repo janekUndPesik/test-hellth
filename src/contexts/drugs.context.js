@@ -4,8 +4,6 @@ import PLACEHOLDER_DATA from '../utils/placeholder-data';
 
 export const DrugsContext = createContext({
   currentDrugs: [],
-  addDrug: () => {},
-  removeDrug: () => {},
   setCurrentDrugs: () => {},
   isSettingsOpen: false,
   setSettingsOpen: () => {},
@@ -20,34 +18,30 @@ export const DrugsProvider = ({ children }) => {
 
     switch (true) {
       case currentJsonValue && (dateString === JSON.parse(jsonDate)):
-        return JSON.parse(currentJsonValue);
+        return JSON.parse(currentJsonValue)
+          .toSorted((a, b) => a.time.localeCompare(b.time));
       case currentJsonValue && (dateString !== JSON.parse(jsonDate)):
         const primaryValue = JSON.parse(currentJsonValue);
-        return primaryValue.map((drug) => ({ ...drug, check: false }));
+        return primaryValue.toSorted((a, b) => a.time.localeCompare(b.time))
+          .map((drug) => ({ ...drug, check: false }));
       default:
-        return PLACEHOLDER_DATA;
+        return PLACEHOLDER_DATA.toSorted((a, b) => a.time.localeCompare(b.time));
     }
   });
 
   const [isSettingsOpen, setSettingsOpen] = useState(false);
 
-const addDrug = (currentDrugs) => {
-  const newDrug = {
-  id: Date.now(),
-  name: 'drug_name',
-  description: '',
-  check: false,
-  };
-  setCurrentDrugs([...currentDrugs, newDrug]);
-};
 
-  const removeDrug = (id) => {
-    setCurrentDrugs(currentDrugs.filter(drug => drug.id !== id));
-  };
-
+  useEffect(() => {
+    const date = new Date();
+    const dateString = `${date.getDate()}${date.getMonth()}`;
+    localStorage.setItem('LOCAL_STASH', JSON.stringify(currentDrugs));
+    localStorage.setItem('DATE', JSON.stringify(dateString));
+  }, [currentDrugs]);
+  
   const toggleSettings = () => setSettingsOpen(!isSettingsOpen);
 
-  const value = { currentDrugs, setCurrentDrugs, addDrug, removeDrug, toggleSettings, isSettingsOpen };
+  const value = { currentDrugs, setCurrentDrugs, toggleSettings, isSettingsOpen };
 
   return <DrugsContext.Provider value={value}>{children}</DrugsContext.Provider>
 };

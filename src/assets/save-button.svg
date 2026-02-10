@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="24"
+     height="24"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+
+  <!-- Floppy outer shape -->
+  <path d="M4 4h14l2 2v14H4z"/>
+
+  <!-- Disk label area -->
+  <rect x="7" y="4" width="8" height="6"/>
+
+  <!-- Write-protect notch -->
+  <rect x="8" y="14" width="8" height="6"/>
+
+</svg>
