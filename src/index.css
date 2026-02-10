@@ -2,10 +2,34 @@
   box-sizing: border-box;
 }
 
+:root {
+  --background-color: rgb(13, 13, 13);
+  --show-background: rgb(224, 224, 210);
+  --show-text: rgb(223, 95, 52);
+  --show-shadow: #ffcc00;
+  --edit-text: rgb(65, 231, 9);
+  --shrink-text: rgb(187, 225, 183);
+}
+
+[data-theme='wrong'] {
+  --background-color: rgb(13, 13, 13);
+  --show-background: rgb(224, 224, 210);
+  --show-text: rgb(65, 231, 9);
+  --show-shadow: #ffcc00;
+  --edit-text: rgb(223, 95, 52);
+}
+
+[data-theme='light'] {
+  --background-color: rgb(224, 224, 210);
+  --show-background: rgb(224, 224, 210);
+  --show-text: rgb(65, 231, 9);
+  --show-shadow: #ffcc00;
+  --edit-text: rgb(223, 95, 52);
+  --shrink-text: rgb(143, 187, 139);
+}
+
 body {
   margin: 0;
-  padding: 10px;
-  background-color: rgb(13, 13, 13);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

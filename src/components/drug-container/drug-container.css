@@ -1,3 +1,19 @@
+.reset-btn {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+
+  &.gray {
+    color: gray;
+  }
+}
+
+.settings-btn {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+}
+
 .drug-container {
   display: flex;
   flex-direction: column;
@@ -9,15 +25,20 @@
 .drug-line-container {
   position: relative;
   margin: 20px 0 20px 0;
-  background-color: rgb(224, 224, 210);
+  background-color: var(--show-background);
   border: 2px solid rgb(137, 86, 175);
   border-radius: 3px;
   font-size: 3vw;
   filter: drop-shadow(0 0 12px rgb(137, 86, 175));
+  transition: 300ms ease all;
 }
 
 .drug-line-container h2, .drug-line-container p {
+  text-align: center;
+  color: var(--show-text);
+  text-shadow: var(--show-shadow) 1px 0 5px;
   margin: 2px 0 0 0;
+  transition: 300ms ease all;
 }
 
 .drug-line-container p {
@@ -31,9 +52,10 @@
   left: -2px;
   width: 100%;
   height: 100%;
-  background-color: rgb(224, 224, 210);
+  background-color: var(--show-background);
   border: 2px solid rgb(137, 86, 175);
   border-radius: 3px;
   filter: drop-shadow(0 0 1px white);
+  transition: 300ms ease all;
   z-index: -1;
-}
+} 

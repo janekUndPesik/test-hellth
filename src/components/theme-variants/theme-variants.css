@@ -1,0 +1,12 @@
+.theme-variants {
+  display: flex;
+  justify-content:space-between;
+}
+
+.left-arrow {
+  padding-right: 10vw;
+}
+
+.right-arrow {
+  padding-left: 10vw;
+}
