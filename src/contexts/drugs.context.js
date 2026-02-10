@@ -4,23 +4,10 @@ import PLACEHOLDER_DATA from '../utils/placeholder-data';
 
 export const DrugsContext = createContext({
   currentDrugs: [],
-  // addDrug: () => {},
-  // removeDrug: () => {},
   setCurrentDrugs: () => {},
   isSettingsOpen: false,
   setSettingsOpen: () => {},
 });
-
-// const sortTime = (a, b ) => {
-//   const aHours = a.slice(0, 2);
-//   const aMinutes = a.slice(2);
-//   const bHours = b.slice(0, 2);
-//   const bMinutes = b.slice(2);
-//   a.aSortableTime = aHours + aMinutes;
-//   b.bSortableTime = bHours + bMinutes;
-//   return a.aSortableTime - b.bSortableTime;
-//      .sort((a, b) => (a.time.slice(0,2) + a.time.slice(2)) - (b.time.slice(0,2) + b.time.slice(2)))
-// } 
 
 export const DrugsProvider = ({ children }) => {
   const [currentDrugs, setCurrentDrugs] = useState(() => {
@@ -51,26 +38,10 @@ export const DrugsProvider = ({ children }) => {
     localStorage.setItem('LOCAL_STASH', JSON.stringify(currentDrugs));
     localStorage.setItem('DATE', JSON.stringify(dateString));
   }, [currentDrugs]);
-
-  // const addDrug = (currentDrugs) => {
-  //   const newDrug = {
-  //     id: Date.now(),
-  //     name: 'drug_name',
-  //     description: '',
-  //     check: false,
-  //     tempName: '',
-  //     tempDescription: '',
-  //   };
-  //   setCurrentDrugs([...currentDrugs, newDrug]);
-  // };
-
-  // const removeDrug = (id) => {
-  //   setCurrentDrugs(currentDrugs.filter(drug => drug.id !== id));
-  // };
-
+  
   const toggleSettings = () => setSettingsOpen(!isSettingsOpen);
 
-  const value = { currentDrugs, setCurrentDrugs, /*addDrug, removeDrug,*/ toggleSettings, isSettingsOpen };
+  const value = { currentDrugs, setCurrentDrugs, toggleSettings, isSettingsOpen };
 
   return <DrugsContext.Provider value={value}>{children}</DrugsContext.Provider>
 };
