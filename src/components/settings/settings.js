@@ -74,6 +74,7 @@ const handleSave = () => {
               label={name}
               type='text'
               value={tempName}
+              maxLength={22}
               onChange={(e) => handleChange(id, 'tempName', e.target.value)}
             />
             <InputGroup 
