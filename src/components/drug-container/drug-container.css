@@ -25,11 +25,12 @@
 .drug-line-container {
   position: relative;
   margin: 20px 0 20px 0;
+  padding: 5px 0;
   background-color: var(--show-background);
-  border: 2px solid rgb(137, 86, 175);
-  border-radius: 3px;
+  border: var(--border-gore);
+  border-radius: var(--border-radius);
   font-size: 3vw;
-  filter: drop-shadow(0 0 12px rgb(137, 86, 175));
+  filter: var(--border-shadow);
   transition: 300ms ease all;
 }
 
@@ -52,10 +53,10 @@
   left: -2px;
   width: 100%;
   height: 100%;
-  background-color: var(--show-background);
-  border: 2px solid rgb(137, 86, 175);
-  border-radius: 3px;
-  filter: drop-shadow(0 0 1px white);
+  background-color: var(--background-after);
+  border: var(--border-after);
+  border-radius: var(--border-radius);
+  filter: var(--shadow-after);
   transition: 300ms ease all;
   z-index: -1;
 } 

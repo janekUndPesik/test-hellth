@@ -9,14 +9,26 @@
   --show-shadow: #ffcc00;
   --edit-text: rgb(65, 231, 9);
   --shrink-text: rgb(187, 225, 183);
+  --border-radius: 5px;
+  --border-gore: 2px solid rgb(119, 55, 168);
+  --border-shadow: drop-shadow(0 0 12px rgb(137, 86, 175));
+  --border-after: 2px solid rgb(119, 55, 168);
+  --shadow-after: drop-shadow(0 0 1px white);
+  --background-after: rgb(224, 224, 210);
 }
 
 [data-theme='wrong'] {
   --background-color: rgb(13, 13, 13);
-  --show-background: rgb(224, 224, 210);
+  --show-background: rgb(18, 18, 18);
   --show-text: rgb(65, 231, 9);
   --show-shadow: #ffcc00;
   --edit-text: rgb(223, 95, 52);
+  --border-radius: 33px;
+  --border-gore: 1px solid rgb(137, 86, 175);
+  --border-shadow: drop-shadow(0 0 7px rgb(137, 86, 175));
+  --border-after: none;
+  --shadow-after: none;
+  --background-after: none;
 }
 
 [data-theme='light'] {
@@ -26,6 +38,12 @@
   --show-shadow: #ffcc00;
   --edit-text: rgb(223, 95, 52);
   --shrink-text: rgb(143, 187, 139);
+  --border-radius: 5px;
+  --border-gore: 2px solid rgb(137, 86, 175);
+  --border-shadow: drop-shadow(0 0 12px rgb(137, 86, 175));
+  --border-after: 2px solid rgb(137, 86, 175);
+  --shadow-after: drop-shadow(0 0 1px white);
+  --background-after: rgb(224, 224, 210);
 }
 
 body {
