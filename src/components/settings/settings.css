@@ -32,6 +32,7 @@
 .settings-container {
   background-color: var(--settings-background);
   width: 100%;
+  min-height: 100vh;
   margin: auto;
   padding: 15% 10% 10% 10%;
   /* padding-top: 15%;
