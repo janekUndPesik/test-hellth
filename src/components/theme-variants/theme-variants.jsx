@@ -8,7 +8,6 @@ const ThemeVariants = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   const handleDecrement = () => {
-    // default hell light wrong default
     switch (true) {
       case theme === 'default':
         return setTheme('wrong');

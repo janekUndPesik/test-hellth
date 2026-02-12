@@ -29,21 +29,6 @@ input:focus {
   outline: none;
 }
 
-/* label {
-  position: absolute;
-  bottom: 2px;
-  pointer-events: none;
-  color: green;
-  transition: 300ms ease all;
-
-  &.shrink {
-    color: rgb(187, 225, 183);
-    position: absolute;
-    bottom: 22px;
-    font-size: 11px;
-  }
-} */
-
 .label-raw {
   position: absolute;
   bottom: 2px;

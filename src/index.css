@@ -19,6 +19,7 @@
   --container-bottom: none;
   --container-radius: none;
   --settings-background: rgb(13, 13, 13);
+  --btn-color: rgb(119, 55, 168);
 }
 
 [data-theme='wrong'] {
@@ -37,6 +38,7 @@
   --container-bottom: none;
   --container-radius: none;
   --settings-background: rgb(13, 13, 13);
+  --btn-color: rgb(119, 55, 168);
 }
 
 [data-theme='light'] {
@@ -56,6 +58,7 @@
   --container-bottom: none;
   --container-radius: none;
   --settings-background: rgb(224, 224, 210);
+  --btn-color: rgb(119, 55, 168);
 }
 
 [data-theme='hell'] {
@@ -80,6 +83,7 @@
   --container-bottom: 17%;
   --container-radius: 0 0 50% 50% / 15%;
   --settings-background: rgb(13, 13, 13);
+  --btn-color: #F95837;
 }
 
 body {

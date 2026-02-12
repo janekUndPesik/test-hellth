@@ -2,6 +2,7 @@
   position: fixed;
   top: 5px;
   left: 5px;
+  color: var(--btn-color);
 
   &.gray {
     color: gray;
@@ -12,17 +13,30 @@
   position: fixed;
   top: 5px;
   right: 5px;
+  width: 24px;
+  height: 24px;
+  color: var(--btn-color);
+  animation: spin 5s ease infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .container {
   position: absolute;
   left: 10%;
-  /* background-color: brown; */
   width: 80%;
   height: var(--container-height);
   margin-bottom: var(--container-bottom);
   overflow: scroll;
   border-radius: var(--container-radius);
+  scrollbar-width: none;
 }
 
 .drug-container {
