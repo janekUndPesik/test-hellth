@@ -14,12 +14,24 @@
   right: 5px;
 }
 
+.container {
+  position: absolute;
+  left: 10%;
+  /* background-color: brown; */
+  width: 80%;
+  height: var(--container-height);
+  margin-bottom: var(--container-bottom);
+  overflow: scroll;
+  border-radius: var(--container-radius);
+}
+
 .drug-container {
   display: flex;
   flex-direction: column;
-  max-width: 60%;
+  max-width: 80%;
   margin: auto;
   padding-top: 25%;
+
 }
 
 .drug-line-container {
@@ -37,7 +49,7 @@
 .drug-line-container h2, .drug-line-container p {
   text-align: center;
   color: var(--show-text);
-  text-shadow: var(--show-shadow) 1px 0 5px;
+  text-shadow: var(--show-shadow);
   margin: 2px 0 0 0;
   transition: 300ms ease all;
 }

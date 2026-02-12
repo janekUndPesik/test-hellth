@@ -1,5 +1,10 @@
 .main-container {
+  position: relative;
   background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-repeat: var(--background-repeat);
+  background-position: var(--background-position);
+  background-attachment: var(--background-attachment);
   min-height: 100vh;
   transition: 300ms ease all;
 }

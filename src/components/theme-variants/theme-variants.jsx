@@ -8,11 +8,14 @@ const ThemeVariants = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   const handleDecrement = () => {
+    // default hell light wrong default
     switch (true) {
       case theme === 'default':
         return setTheme('wrong');
       case theme === 'wrong':
         return setTheme('light');
+      case theme === 'light':
+        return setTheme('hell');
       default: 
         return setTheme('default');
     }
@@ -21,6 +24,8 @@ const ThemeVariants = () => {
   const handleIncrement = () => {
     switch (true) {
       case theme === 'default':
+        return setTheme('hell');
+      case theme === 'hell':
         return setTheme('light');
       case theme === 'light':
         return setTheme('wrong');

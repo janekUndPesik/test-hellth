@@ -61,7 +61,7 @@ const handleSave = () => {
 
   return (
     <>
-      <div className='nav-container' data-theme={theme}>
+      <div className='nav-container settings' data-theme={theme}>
         <div className='save-btn' onClick={handleSave}><SaveIcon /></div>
         <ThemeVariants />
         <div className='cross-btn' onClick={toggleSettings}><CrossIcon /></div>

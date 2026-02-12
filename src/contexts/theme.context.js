@@ -13,6 +13,8 @@ export const ThemeProvider = ({ children }) => {
         return 'light';
       case 'wrong':
         return 'wrong';
+      case 'hell':
+        return 'hell';
       default:
         return 'default';
     };

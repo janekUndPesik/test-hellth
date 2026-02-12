@@ -31,6 +31,7 @@ const DrugContainer = () => {
         <div className='settings-btn' onClick={toggleSettings}><SettingsIcon /></div>
       </div>
 
+      <div className='container'>
       <div className='drug-container'>
           {currentDrugs.filter((drug) => drug.check === false)
           .map(({ id, name, time }) => (
@@ -39,7 +40,7 @@ const DrugContainer = () => {
               <p>{`Time of injection: ${time}`}</p>
             </div>
           ))}
-      </div>
+      </div></div>
     </>
     );
 };
